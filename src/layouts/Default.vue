@@ -8,9 +8,9 @@
           <slot/>
         </main>
       </transition>
-
-      <Contact />
     </div>
+    <Partners />
+    <Contact />
     <Footer />
   </div>
 </template>
@@ -27,12 +27,14 @@ query {
 import Navbar from '@/components/Navbar.vue'
 import Contact from '@/components/Contact.vue'
 import Footer from '@/components/Footer.vue'
+import Partners from '@/components/Partners.vue'
 export default {
   name: 'layout',
   components: {
     Navbar,
     Contact,
-    Footer
+    Footer,
+    Partners
   },
 }
 </script>

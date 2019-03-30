@@ -1,8 +1,14 @@
 <template>
   <Layout>
     <div class="about">
+      <div class="about-us">
       <h1>About us</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+      <p class="p-details">Real.Simple.IT organized in January 2019 with the real simple goal of building a first rate company that partners with our customers to deliver  outstanding service in a consistent and cost effective way. We understand the complexity of building and maintaining your IT infrastructure and we believe in proactive IT management by maximizing the benefits of technology with daily, weekly and monthly automated IT tasks that ensure all jobs are completed consistently and without fail. We strive to provide our customers with reliability, security and performance by using our identified “best practices” developed over years of collective experience. Real.Simple.IT knows that consistency creates reliability which results in predictable costs. Our goal is to serve as your technology partner using a consultative approach to evaluate your business and help you untangle your current and future IT needs.</p>
+      </div>
+      <div class="management">
+        <h1>Management</h1>
+        <p class="p-details">Trey Caples, President/Engineering Principal – Trey brings over 20 years of experience in IT management and consulting services to Real.Simple.IT and holds numerous certifications as well as being a RSA certified security professional.  Before starting Real.Simple.IT, he worked for companies large and small as a consultant and as a full time IT Director. Through hard work and hard won experience, he learned how to keep critical networks running smoothly and helped achieve the greatest returns on a company’s IT investments.</p>
+      </div>
     </div>
   </Layout>
 </template>
@@ -17,7 +23,12 @@ export default {
 
 <style>
   .about {
-    min-height: 100vh;
+    max-height: 100vh;
+    margin-bottom: 100px;
+  }
+
+  .p-details {
+    font-size: 1.15rem;
   }
 </style>
 
