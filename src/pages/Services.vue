@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="services">
+    <div class="services-view">
       <Sidebar />
       <div class="selected">
         <h1>Services</h1>
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style>
-  .services {
+  .services-view {
     display: flex;
     min-height: 100vh;
   }

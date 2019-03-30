@@ -1,32 +1,54 @@
 <template>
   <Layout>
-    <div class="index">
+    <section class="hero">
       <g-image src="../assets/img/HeroBackground.png" class="hero-background"></g-image>
-      <div class="hero">
-        <div class="hero-details">
-          <h1 class="hero-header">Real.Simple.IT</h1>
-          <p class="hero-info">At Real.Simple.IT, our goal is to bring high quality managed services to you and your business. We understand the importance of security and performance of your technology infrastructure. </p>
-          <p class="hero-call-to-action">Apply for a free assessment today to learn more about what we have to offer!</p>
-          <g-image src="../assets/img/Arrow.png" width="250" class="arrow"></g-image>
-          <div class="btn-group">
-            <g-link class="services-btn" to="/services">Services</g-link>
-            <a class="contact-btn" href="#contact">Free Assesment</a>
+      <div class="hero-details">
+        <h1 class="hero-header">Real.Simple.IT</h1>
+        <p class="hero-info">At Real.Simple.IT, our goal is to bring high quality managed services to you and your business. We understand the importance of security and performance of your technology infrastructure. </p>
+        <p class="hero-call-to-action">Apply for a free assessment today to learn more about what we have to offer!</p>
+        <g-image src="../assets/img/Arrow.png" width="250" class="arrow"></g-image>
+        <div class="btn-group">
+          <g-link class="services-btn" to="/services">Services</g-link>
+          <a class="contact-btn" href="#contact">Free Assesment</a>
+        </div>
+      </div>
+      <Form :slogan="'Get your free assesment today!'" class="form" />
+    </section>
+    <section class="services">
+      <h2 class="services-header">Our Services</h2>
+      <div class="services-content">
+        <div class="services-section">
+          <h2>Managed Services</h2>
+          <div class="service-icons">
+            <Icon :icon="'dns'" :title="'Infrastructure Solutions'" />
+            <Icon :icon="'cast_connected'" :title="'Systems Integration'" />
+            <Icon :icon="'security'" :title="'Network Security'" />
           </div>
         </div>
-        <Form :slogan="'Get your free assesment today!'" class="form" />
+        <div class="services-section">
+          <h2>Consulting Services</h2>
+          <div class="service-icons">
+            <Icon :icon="'storage'" :title="'System Log Monitoring'" />
+            <Icon :icon="'developer_board'" :title="'Daily System Audits'" />
+            <Icon :icon="'wifi_lock'" :title="'Virus Protection Management'" />
+          </div>
+        </div>
       </div>
-    </div>
+      <g-link to="/services" class="service-link">Learn More>></g-link>
+    </section>
   </Layout>
 </template>
 
 <script>
 import Form from '@/components/Form.vue'
+import Icon from '@/components/Icon.vue'
 export default {
   metaInfo: {
     title: 'Hello, world!'
   },
   components: {
-    Form
+    Form,
+    Icon
   }
 }
 </script>
@@ -34,10 +56,6 @@ export default {
 <style>
 .home-links a {
   margin-right: 1rem;
-}
-
-.index {
-  min-height: 100vh;
 }
 
 .hero {
@@ -120,5 +138,54 @@ export default {
   .btn-group {
     display: block;
   }
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.services-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+
+.services-header {
+  font-size: 2.0rem;
+  margin-top: 0;
+  color: var(--white);
+}
+
+.services-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.service-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.service-link {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-bottom: 2px solid var(--main);
+  align-self: flex-end;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.service-link:hover {
+  color: black;
 }
 </style>
