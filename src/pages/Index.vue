@@ -12,7 +12,7 @@
           <a class="contact-btn" href="#contact">Free Assesment</a>
         </div>
       </div>
-      <Form :slogan="'Get your free assesment today!'" class="form" />
+      <Form :slogan="'Get your free assessment today!'" class="form" />
     </section>
     <section class="services">
       <h2 class="services-header">Our Services</h2>
@@ -34,7 +34,7 @@
           </div>
         </div>
       </div>
-      <g-link to="/services" class="service-link">Learn More>></g-link>
+      <g-link to="/service/free-network-assessment" class="service-link">Learn More>></g-link>
     </section>
   </Layout>
 </template>
