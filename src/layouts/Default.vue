@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <div class="layout-container">
-      <Navbar />
+      <Navbar id="navbar" />
       <!-- content -->
       <transition name="fade" appear>
         <main>
