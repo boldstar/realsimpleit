@@ -6,7 +6,7 @@
       <nav class="nav">
         <g-link class="nav__link" to="/about">About Us</g-link>
         <i class="material-icons">description</i>
-        <g-link class="nav__link" to="/services">Services</g-link>
+        <g-link class="nav__link" to="/service/free-network-assessment">Services</g-link>
         <i class="material-icons">dns</i>
         <a class="nav__link" href="#contact">Contact</a>
         <i class="material-icons">phone_in_talk</i>
