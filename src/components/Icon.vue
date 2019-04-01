@@ -22,6 +22,7 @@ export default {
     width: 300px;
     box-shadow: 0 2px 15px 8px rgba(0, 0, 0, 0.164); 
     border-radius: 8px;
+    justify-content: center;
   }
 
   .title {
@@ -38,7 +39,6 @@ export default {
     .icon {
       height: 100px;
       width: 200px;
-      padding-top: 30px;
     }
 
     .material-icons {

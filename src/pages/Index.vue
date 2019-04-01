@@ -169,7 +169,7 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 75px;
 }
 
 

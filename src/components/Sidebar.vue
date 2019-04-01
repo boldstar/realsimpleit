@@ -23,6 +23,7 @@
           </li>
         </ul>
       </div>
+      <g-image src="../assets/img/microchip.png" class="microchip"></g-image>
     </div>
 </template>
 
@@ -63,9 +64,14 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-right: 1px solid black;
-    background-color: rgb(235, 235, 235);
+    border-right: 1px solid var(--main);
+    background-color: rgb(245, 245, 245);
     padding: 10px;
+  }
+
+  .microchip {
+    width: 100px;
+    margin: 0 auto;
   }
 
   .sidebar-btn {
@@ -115,6 +121,10 @@ export default {
 @media screen and (max-width: 767px) {
   .services-link {
     font-size: .8rem;
+  }
+
+  .microchip {
+    display: none;
   }
 
   .title {

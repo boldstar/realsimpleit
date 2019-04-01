@@ -1,10 +1,12 @@
 <template>
     <footer class="footer">
-      <span>Real.Simple.IT</span>
-      <div class="footer-details">
-        <span>Address</span>
-        <span>Phone Number</span>
-        <span>Social Media</span>
+      <div class="footer-content">
+        <span>Real.Simple.IT</span>
+        <div class="footer-details">
+          <span>Address</span>
+          <span>Phone Number</span>
+          <span>Social Media</span>
+        </div>
       </div>
     </footer>
 </template>
@@ -17,14 +19,20 @@ export default {
 
 <style>
   footer {
-    display: flex;
-    justify-content: space-between;
     padding: 30px 100px;
     background-color: var(--gray);
     font-size: 1.1rem;
     font-weight: bold;
     color: white;
     position: relative;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
   }
 
   .footer-details {
