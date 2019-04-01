@@ -80,6 +80,20 @@ export default {
   min-height: 100vh;
 }
 
+@media screen and (max-width: 450px) {
+  .hero-background {
+    display: none!important;
+  }
+
+  .services-header {
+    color: var(--main)!important;
+  }
+
+  .services-btn {
+    background: var(--main)!important;
+  }
+}
+
 .hero-header {
   color: var(--main);
 }
