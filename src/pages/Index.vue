@@ -8,7 +8,7 @@
         <p class="hero-call-to-action">Apply for a free assessment today to learn more about what we have to offer!</p>
         <g-image src="../assets/img/Arrow.png" width="250" class="arrow"></g-image>
         <div class="btn-group">
-          <g-link class="services-btn" to="/services">Services</g-link>
+          <g-link class="services-btn" to="/service/free-network-assessment">Services</g-link>
           <a class="contact-btn" href="#contact">Free Assesment</a>
         </div>
       </div>
@@ -18,7 +18,7 @@
       <h2 class="services-header">Our Services</h2>
       <div class="services-content">
         <div class="services-section">
-          <h2>Managed Services</h2>
+          <h2 class="services-section-header">Managed Services</h2>
           <div class="service-icons">
             <Icon :icon="'dns'" :title="'Infrastructure Solutions'" />
             <Icon :icon="'cast_connected'" :title="'Systems Integration'" />
@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="services-section">
-          <h2>Consulting Services</h2>
+          <h2 class="services-section-header">Consulting Services</h2>
           <div class="service-icons">
             <Icon :icon="'storage'" :title="'System Log Monitoring'" />
             <Icon :icon="'developer_board'" :title="'Daily System Audits'" />
@@ -44,7 +44,7 @@ import Form from '@/components/Form.vue'
 import Icon from '@/components/Icon.vue'
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Home'
   },
   components: {
     Form,
@@ -138,6 +138,22 @@ export default {
   .btn-group {
     display: block;
   }
+
+}
+
+@media screen and (max-width: 767px) {
+  .hero-details {
+    padding: 20px;
+  }
+
+  .hero-info {
+    font-size: 1.00rem;
+  }
+
+  .hero-call-to-action {
+    font-size: 1.00rem;
+    font-weight: bold;
+  }
 }
 
 .services {
@@ -188,5 +204,40 @@ export default {
 
 .service-link:hover {
   color: black;
+}
+
+@media screen and (max-width: 1120px) {
+  .services-content {
+    background: var(--white);
+  }
+
+  .service-icons {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .services-section-header {
+    font-size: 1.2rem;
+    margin-left: 50px;
+  }
+
+  .service-link {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .services-section {
+    align-items: center;
+  }
+
+  .service-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-section-header {
+    margin: 10px auto;
+  }
 }
 </style>

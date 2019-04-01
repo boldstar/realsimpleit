@@ -23,11 +23,13 @@ export default {
   }
 
   .title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    color: var(--white);
   }
 
   .material-icons {
     font-size: 5rem!important;
+    color: var(--main);
   }
 </style>

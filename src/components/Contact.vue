@@ -28,6 +28,7 @@ export default {
     flex-direction: column;
     align-items: center;
     background-image: url('../assets/img/ContactBackground.png');
+    background-color: var(--gray);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,6 +65,12 @@ export default {
 
     .arrow {
       display: none;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .contact-content {
+      margin-top: 10px;
     }
   }
 </style>

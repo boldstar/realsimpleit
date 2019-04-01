@@ -29,4 +29,10 @@ export default {
         margin-left: 20px;
         color: var(--main);
     }
+
+    @media screen and (max-width: 767px){
+        .post-title {
+            font-size: 1rem;
+        }
+    }
 </style>

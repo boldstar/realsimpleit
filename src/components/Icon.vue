@@ -31,5 +31,39 @@ export default {
 
   .material-icons {
     font-size: 5rem!important;
+    color: var(--main);
+  }
+
+  @media screen and (max-width: 1120px) {
+    .icon {
+      height: 100px;
+      width: 200px;
+      padding-top: 30px;
+    }
+
+    .material-icons {
+      font-size: 2.5rem!important;
+    }
+
+    .title {
+      font-size: .7rem;
+      font-weight: lighter;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .icon {
+      margin: 10px auto;
+      width: 100%;
+    }
+
+    .material-icons {
+      font-size: 3.5rem!important;
+    }
+
+    .title {
+      font-size: 1.0rem;
+      font-weight: bold;
+    }
   }
 </style>

@@ -1,19 +1,24 @@
 <template>
-    <div class="sidebar">
-      <div class="service-list">
+    <div class="sidebar" :class="{'sidebar-collapsed': toggle}">
+      <button class="sidebar-btn" type="button" @click="toggleSidebar">
+        <i class="material-icons btn-icon">
+          menu
+        </i>
+      </button>
+      <div class="service-list" :class="{'show-links': toggle}">
         <span class="service-category">Consulting</span>
         <hr>
         <ul>
-          <li v-for="service in $static.services.edges" :key="service.id">
+          <li v-for="service in $static.services.edges" :key="service.id" @click="toggle = false">
             <g-link v-if="service.node.category == 'Consulting'" class="services-link" :to="service.node.path" :class="{'active-link' : service.node.path == $route.path}">{{ service.node.title }}</g-link>
           </li>
         </ul>
       </div>
-      <div class="service-list">
+      <div class="service-list" :class="{'show-links': toggle}">
         <span class="service-category">Managed</span>
         <hr>
         <ul>
-          <li v-for="service in $static.services.edges" :key="service.id">
+          <li v-for="service in $static.services.edges" :key="service.id" @click="toggle = false">
             <g-link v-if="service.node.category == 'Managed'" class="services-link" :to="service.node.path" :class="{'active-link' : service.node.path == $route.path}">{{ service.node.title }}</g-link>
           </li>
         </ul>
@@ -41,16 +46,12 @@ export default {
     name: 'Sidebar',
     data() {
       return {
-        managed: false,
-        consulting: false,
+        toggle: false
       }
     },
     methods: {
-      showManaged() {
-        this.managed = !this.managed
-      },
-      showConsulting() {
-        this.consulting = !this.consulting
+      toggleSidebar() {
+        this.toggle = !this.toggle
       }
     }
 }
@@ -65,6 +66,10 @@ export default {
     border-right: 1px solid black;
     background-color: rgb(235, 235, 235);
     padding: 10px;
+  }
+
+  .sidebar-btn {
+    display: none;
   }
 
   ul {
@@ -106,4 +111,51 @@ export default {
     font-weight: bold;
     font-size: 1.2rem;
   }
+
+@media screen and (max-width: 767px) {
+  .services-link {
+    font-size: .8rem;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .sidebar {
+    width: 50px;
+  }
+
+  .service-list {
+    display: none;
+  }
+
+  .sidebar-btn {
+    display: block!important;
+    background: none;
+    border: none;
+    cursor: pointer!important;
+    z-index: 2;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .btn-icon {
+    display: block!important;
+    font-size: 2rem!important;    
+    align-self: center;
+    margin-top: 0!important;
+    cursor: pointer!important;
+    color: var(--main);
+  }
+
+  .sidebar-collapsed {
+    width: 300px!important;
+  }
+
+  .show-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>

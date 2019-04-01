@@ -1,10 +1,12 @@
 <template>
   <div class="partners">
     <h2 class="partners-header">Partnerships</h2>
-    <div class="partners-content">
-      <Partner :icon="'dns'" :title="'Partner Title'" />
-      <Partner :icon="'dns'" :title="'Partner Title'" />
-      <Partner :icon="'dns'" :title="'Partner Title'" />
+    <div class="partners-background">
+      <div class="partners-content">
+        <Partner :icon="'dns'" :title="'Partner Title'" />
+        <Partner :icon="'dns'" :title="'Partner Title'" />
+        <Partner :icon="'dns'" :title="'Partner Title'" />
+      </div>
     </div>
   </div>
 </template>
@@ -23,20 +25,26 @@ export default {
   .partners {
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
   }
 
   .partners-header {
-     font-size: 2.0rem;
+    font-size: 2.0rem;
     margin-top: 0;
     color: var(--main);
   }
 
-  .partners-content {
+  .partners-background {
     background-color: var(--gray);
     width: 100%;
+  }
+
+  .partners-content {
+    width: 100%;
+    max-width: 1120px;
     display: flex;
     justify-content: space-between;
     padding: 50px 0;
+    margin: 0 auto;
   }
 </style>

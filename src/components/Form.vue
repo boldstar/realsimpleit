@@ -55,4 +55,15 @@ export default {
     font-weight: bold;
     margin-bottom: 10px;
   }
+
+  @media screen and (max-width: 767px) {
+    .slogan {
+      font-size: 1rem;
+    }
+
+    form {
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
 </style>

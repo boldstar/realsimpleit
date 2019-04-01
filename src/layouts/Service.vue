@@ -98,6 +98,7 @@ body {
 	@media (max-width: 767px) {
 		.markdown-body {
 			padding: 15px;
+      font-size: .8rem;
 		}
 	}
 </style>

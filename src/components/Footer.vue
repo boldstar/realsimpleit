@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-      <span>Real Simple IT</span>
+      <span>Real.Simple.IT</span>
       <div class="footer-details">
         <span>Address</span>
         <span>Phone Number</span>
@@ -30,5 +30,12 @@ export default {
   .footer-details {
     display: flex;
     flex-direction: column;
+  }
+
+  @media screen and (max-width: 767px) {
+    footer {
+      padding: 30px 50px;
+      font-size: .8rem;
+    }
   }
 </style>
