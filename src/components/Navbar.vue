@@ -48,12 +48,9 @@ export default {
         this.toggle = !this.toggle
       }
     },
-    created() {
+    mounted() {
         window.addEventListener('scroll', this.handleSCroll);
     },
-    destroyed () {
-        window.removeEventListener('scroll', this.handleSCroll);
-      } 
 }
 </script>
 
