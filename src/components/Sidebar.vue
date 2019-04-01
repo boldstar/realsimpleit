@@ -132,7 +132,7 @@ export default {
   }
 
   .sidebar {
-    width: 50px;
+    width: 20px;
   }
 
   .service-list {
@@ -145,14 +145,12 @@ export default {
     border: none;
     cursor: pointer!important;
     z-index: 2;
-    margin-left: auto;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    padding: 0;
   }
 
   .btn-icon {
     display: block!important;
-    font-size: 2rem!important;    
+    font-size: 1.4rem!important;    
     align-self: center;
     margin-top: 0!important;
     cursor: pointer!important;
