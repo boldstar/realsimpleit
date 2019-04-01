@@ -81,6 +81,10 @@ export default {
 }
 
 @media screen and (max-width: 450px) {
+  .hero {
+    height: 70vh;
+  }
+
   .hero-background {
     display: none!important;
   }
@@ -100,6 +104,15 @@ export default {
 
 .hero-info {
   font-size: 1.25rem;
+}
+
+@media screen and (max-width: 450px) {
+  .hero-header {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-shadow: 3px 2px 5px rgba(0,0,0,.250);
+  }
 }
 
 .hero-call-to-action {
@@ -252,6 +265,12 @@ export default {
 
   .services-section-header {
     margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .services-content {
+    margin-top: 10px;
   }
 }
 </style>
