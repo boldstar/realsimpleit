@@ -1,5 +1,5 @@
 <template>
-    <form name="Free Assessment Form" method="post" data-netlify-honeypot="bot-field">
+    <form @submit.prevent="handleSubmit" name="Free Assessment Form" method="post" data-netlify-honeypot="bot-field">
       <span class="slogan">{{ slogan }}</span>
       <input type="hidden" name="form-name" value="contact"  class="hidden"/>
       <input @input="ev => formData.business_name = ev.target.value" type="text" name="Business Name" placeholder="Business Name" :class="{'input-error': error}" @change="error = false">
@@ -7,7 +7,7 @@
       <input @input="ev => formData.last_name = ev.target.value" type="text" name="Last Name" placeholder="Last Name" :class="{'input-error': error}" @change="error = false">
       <input @input="ev => formData.email = ev.target.value" type="email" name="Email" placeholder="Email" :class="{'input-error': error}" @change="error = false">
       <input @input="ev => formData.phone = ev.target.value" type="text" name="Phone Number" placeholder="Phone Number" :class="{'input-error': error}" @change="error = false">
-      <button type="button" class="form-btn" @click="handleSubmit">Submit</button>
+      <button type="submit" class="form-btn">Submit</button>
     </form>
 </template>
 
@@ -23,16 +23,19 @@ export default {
   },
   methods: {
     encode(data) {
-    return Object.keys(data)
+    const keys =  Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&')
+
+      console.log(keys)
+      return keys
     },
     handleSubmit(e) {
       fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({
-          'form-name': "Free Assessment Form",
+          'form-name': e.target.getAttribute('name'),
               ...this.formData
         }),
       })
