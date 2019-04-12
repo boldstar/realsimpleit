@@ -1,41 +1,36 @@
 <template>
-  <form 
-    name="contact"
-    method="post"
-    v-on:submit.prevent="handleSubmit"
-    action="/success/"
-    data-netlify="true"
-    data-netlify-honeypot="bot-field"
-  >
-  <p class="slogan">{{slogan}}</p>
-    <input type="hidden" name="form-name" value="contact" />
-    <p hidden>
-      <label>
-        Don’t fill this out: <input name="bot-field" />
-      </label>
-    </p>
-      <div class="input-group">
-        <label for="name" class="label" >Business Name</label>
-        <input type="text" name="name" v-model="formData.name" />
-      </div>
-      <div class="input-group">
-        <label for="number" class="label" >First Name</label>
-        <input type="text" name="number" v-model="formData.number" />
-      </div>
-      <div class="input-group">
-        <label for="email" class="label" >Last Name</label>
-        <input type="text" name="email" v-model="formData.email" />
-      </div>
-      <!-- <div class="input-group">
-        <label for="number" class="label" >Phone Number</label>
-        <input type="text" name="Phone Number" v-model="formData.phone" />
-      </div>
-      <div class="input-group">
-        <label for="email">Eamil</label>
-        <input type="email" name="Email" v-model="formData.email" />
-      </div> -->
-    <button type="submit" class="form-btn">Submit form</button>
-  </form>
+    <form 
+  name="contact"
+  method="post"
+  v-on:submit.prevent="handleSubmit"
+  action="/success/"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <p hidden>
+    <label>
+      Don’t fill this out: <input name="bot-field" />
+    </label>
+  </p>
+  <div class="sender-info">
+    <div>
+      <label for="name" class="label" >Your name</label>
+      <input type="text" name="name" v-model="formData.name" />
+    </div>
+    <div>
+      <label for="email">Your email</label>
+      <input type="email" name="email" v-model="formData.email" />
+    </div>
+  </div>
+
+  <div class="message-wrapper">
+    <label for="message">Message</label>
+    <textarea name="message" v-model="formData.message"></textarea>
+  </div>
+
+  <button type="submit">Submit form</button>
+</form>
 </template>
 
 <script>
@@ -62,7 +57,7 @@ export default {
         ...this.formData,
       }),
     })
-    .then(() => this.$router.push('/'))
+    .then(() => this.$router.push('/success'))
     .catch(error => alert(error))
   }
 }
@@ -70,19 +65,13 @@ export default {
 </script>
 
 <style>
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 500px;
     box-shadow: 0 2px 15px 8px rgba(0, 0, 0, 0.164); 
-    padding: 15px;
+    padding: 20px;
     border-radius: 5px;
     background: var(--white);
   }
@@ -116,15 +105,10 @@ export default {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-    margin-top: 0;
   }
 
   .input-error {
     border: 1px solid red;
-  }
-
-  .input-group {
-    width: 100%;
   }
 
   @media screen and (max-width: 767px) {
