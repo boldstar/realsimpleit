@@ -1,14 +1,36 @@
 <template>
-    <form @submit.prevent="handleSubmit" name="Free Assessment Form" method="post" data-netlify-honeypot="bot-field">
-      <span class="slogan">{{ slogan }}</span>
-      <input type="hidden" name="form-name" value="contact"  class="hidden"/>
-      <input @input="ev => formData.business_name = ev.target.value" type="text" name="Business Name" placeholder="Business Name" :class="{'input-error': error}" @change="error = false">
-      <input @input="ev => formData.first_name = ev.target.value" type="text" name="First Name" placeholder="First Name" :class="{'input-error': error}" @change="error = false">
-      <input @input="ev => formData.last_name = ev.target.value" type="text" name="Last Name" placeholder="Last Name" :class="{'input-error': error}" @change="error = false">
-      <input @input="ev => formData.email = ev.target.value" type="email" name="Email" placeholder="Email" :class="{'input-error': error}" @change="error = false">
-      <input @input="ev => formData.phone = ev.target.value" type="text" name="Phone Number" placeholder="Phone Number" :class="{'input-error': error}" @change="error = false">
-      <button type="submit" class="form-btn">Submit</button>
-    </form>
+    <form 
+  name="contact"
+  method="post"
+  v-on:submit.prevent="handleSubmit"
+  action="/success/"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+>
+  <input type="hidden" name="form-name" value="contact" />
+  <p hidden>
+    <label>
+      Don’t fill this out: <input name="bot-field" />
+    </label>
+  </p>
+  <div class="sender-info">
+    <div>
+      <label for="name" class="label" >Your name</label>
+      <input type="text" name="name" v-model="formData.name" />
+    </div>
+    <div>
+      <label for="email">Your email</label>
+      <input type="email" name="email" v-model="formData.email" />
+    </div>
+  </div>
+
+  <div class="message-wrapper">
+    <label for="message">Message</label>
+    <textarea name="message" v-model="formData.message"></textarea>
+  </div>
+
+  <button type="submit">Submit form</button>
+</form>
 </template>
 
 <script>
@@ -16,37 +38,29 @@ export default {
   name: 'Form',
   props: ['slogan'],
     data() {
-    return {
-      formData: {},
-      error: false
-    }
+  return {
+    formData: {},
+  }
   },
-  methods: {
-    encode(data) {
-    const keys =  Object.keys(data)
+ methods: {
+  encode(data) {
+    return Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&')
-
-      console.log(keys)
-      return keys
-    },
-    handleSubmit(e) {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: this.encode({
-          'form-name': e.target.getAttribute('name'),
-              ...this.formData
-        }),
-      })
-      .then(() => {
-        this.formData = ""
-        this.$router.push('/')
-        alert('Form Submitted!')
-      })
-      .catch(error => alert(error))
-    }
+  },
+  handleSubmit(e) {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: this.encode({
+        'form-name': e.target.getAttribute('name'),
+        ...this.formData,
+      }),
+    })
+    .then(() => this.$router.push('/success'))
+    .catch(error => alert(error))
   }
+}
 }
 </script>
 
