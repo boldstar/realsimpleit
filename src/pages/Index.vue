@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="hero">
-      <g-image src="../assets/img/HeroBackground.png" class="hero-background"></g-image>
+      <img src="../assets/img/HeroBackground.png" class="hero-background">
       <div class="hero-details">
         <h1 class="hero-header">Real.Simple.IT</h1>
         <p class="hero-info">At Real.Simple.IT, our goal is to bring high quality managed services to you and your business. We understand the importance of security and performance of your technology infrastructure. </p>

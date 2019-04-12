@@ -3,15 +3,15 @@
     <h2 class="partners-header">Partnerships</h2>
     <div class="partners-background">
       <div class="partners-content">
-        <g-image src="../assets/img/cisco_logo.png" class="partner-img"></g-image>
-        <g-image src="../assets/img/vmware_logo.png" class="partner-img"></g-image>
-        <g-image src="../assets/img/microsoft_logo.png" class="partner-img"></g-image>
-        <g-image src="../assets/img/dellemc_logo.jpg" class="partner-img"></g-image>
-        <g-image src="../assets/img/aws_logo.png" class="partner-img"></g-image>
-        <g-image src="../assets/img/veeam_logo.jpg" class="partner-img"></g-image>
-        <g-image src="../assets/img/ingram_logo.png" class="watchguard-img"></g-image>
-        <g-image src="../assets/img/watchguard_logo.png" class="watchguard-img"></g-image>
-        <g-image src="../assets/img/acronis_logo.png" class="watchguard-img"></g-image>
+        <img src="../assets/img/cisco_logo.png" class="partner-img">
+        <img src="../assets/img/vmware_logo.png" class="partner-img">
+        <img src="../assets/img/microsoft_logo.png" class="partner-img">
+        <img src="../assets/img/dellemc_logo.jpg" class="partner-img">
+        <img src="../assets/img/aws_logo.png" class="partner-img">
+        <img src="../assets/img/veeam_logo.jpg" class="partner-img">
+        <img src="../assets/img/ingram_logo.png" class="watchguard-img">
+        <img src="../assets/img/watchguard_logo.png" class="watchguard-img">
+        <img src="../assets/img/acronis_logo.png" class="watchguard-img">
       </div>
     </div>
   </div>
