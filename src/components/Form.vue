@@ -19,6 +19,14 @@
       <input type="text" name="name" v-model="formData.name" />
     </div>
     <div>
+      <label for="first_name" class="label" >Your name</label>
+      <input type="text" name="first_name" v-model="formData.name" />
+    </div>
+    <div>
+      <label for="last_name" class="label" >Your name</label>
+      <input type="text" name="last_name" v-model="formData.name" />
+    </div>
+    <div>
       <label for="email">Your email</label>
       <input type="email" name="email" v-model="formData.email" />
     </div>
