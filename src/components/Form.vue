@@ -1,5 +1,5 @@
 <template>
-     <form @submit.prevent="handleSubmit" action="/" name="Free Assessment Form" data-netlify="true" netlify-honeypot="bot-field" method="post">
+     <form action="/" name="Free Assessment Form" data-netlify="true" netlify-honeypot="bot-field" method="post">
       <span class="slogan">{{ slogan }}</span>
       <p class="hidden-input">
         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
@@ -30,43 +30,7 @@ export default {
       }
     },
     methods: {
-      encode(data) {
-      return Object.keys(data)
-        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&')
-        },
-      handleSubmit(e) {
-        if(this.business_name == '' || this.business_name == null) {
-          this.error = true 
-          return;
-        }
-        if(this.first_name == '' || this.first_name == null) {
-          this.error = true
-          return;
-          }
-        if(this.last_name == '' || this.last_name == null) {
-          this.error = true
-          return;
-          }
-        if(this.email == '' || this.email == null) {
-          this.error = true
-          return;
-          }
-        if(this.phone == '' || this.phone == null) {
-          this.error = true
-          return;
-          }
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: this.encode({
-            'form-name': e.target.getAttribute('name'),
-            ...this.formData,
-          }),
-        })
-        .then(() => this.$router.push('/'))
-        .catch(error => alert(error))
-      }
+      
     }
 }
 </script>
