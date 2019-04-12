@@ -1,6 +1,7 @@
 ---
 title: Disaster Recovery
 category: Consulting
+excerpt: In the event of a disaster, are you able to restore your company’s critical software and applications
 ---
 
 In the event of a disaster, are you able to restore your company’s critical software and applications in minutes rather than hours or days? No matter the size of your business, technology continues to change the way we operate. From servers processing information and storing large amounts of data, to employees using e-mail, VoIP, desktop computers, laptops and wireless devices to process, manage and communicate.
