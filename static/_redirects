@@ -1,0 +1,3 @@
+/service/* /service/:splat 301
+/about /about 301
+/ / 301
