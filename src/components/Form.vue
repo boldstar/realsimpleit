@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="handleSubmit" name="Free Assessment Form" method="post" data-netlify-honeypot="bot-field">
+    <form name="Free Assessment Form" method="post" data-netlify-honeypot="bot-field">
       <span class="slogan">{{ slogan }}</span>
       <input type="hidden" name="form-name" value="contact"  class="hidden"/>
       <input @input="ev => formData.business_name = ev.target.value" type="text" name="Business Name" placeholder="Business Name" :class="{'input-error': error}" @change="error = false">
@@ -7,7 +7,7 @@
       <input @input="ev => formData.last_name = ev.target.value" type="text" name="Last Name" placeholder="Last Name" :class="{'input-error': error}" @change="error = false">
       <input @input="ev => formData.email = ev.target.value" type="email" name="Email" placeholder="Email" :class="{'input-error': error}" @change="error = false">
       <input @input="ev => formData.phone = ev.target.value" type="text" name="Phone Number" placeholder="Phone Number" :class="{'input-error': error}" @change="error = false">
-      <button type="submit" class="form-btn">Submit</button>
+      <button type="button" class="form-btn" @click="handleSubmit">Submit</button>
     </form>
 </template>
 
