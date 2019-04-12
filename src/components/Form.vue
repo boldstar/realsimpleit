@@ -1,9 +1,6 @@
 <template>
-    <form action="/" name="Free Assessment Form" data-netlify="true" netlify-honeypot="bot-field" method="post">
+    <form action="/" name="Free Assessment Form" data-netlify="true" method="post">
       <span class="slogan">{{ slogan }}</span>
-      <p class="hidden">
-        <label>Don’t fill this out if you're human: <input name="bot-field" type="hidden" value="home-contact" /></label>
-      </p>
       <input type="text" name="Business Name" placeholder="Business Name">
       <input type="text" name="First Name" placeholder="First Name">
       <input type="text" name="Last Name" placeholder="Last Name">
