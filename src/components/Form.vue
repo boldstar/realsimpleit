@@ -15,25 +15,25 @@
       </label>
     </p>
       <div class="input-group">
-        <label for="business" class="label" >Business Name</label>
-        <input type="text" name="Business Name" v-model="formData.business_name" />
+        <label for="name" class="label" >Business Name</label>
+        <input type="text" name="name" v-model="formData.name" />
       </div>
       <div class="input-group">
-        <label for="first_name" class="label" >First Name</label>
-        <input type="text" name="First Name" v-model="formData.first_name" />
+        <label for="number" class="label" >First Name</label>
+        <input type="text" name="number" v-model="formData.number" />
       </div>
       <div class="input-group">
-        <label for="last_name" class="label" >Last Name</label>
-        <input type="text" name="Last Name" v-model="formData.last_name" />
+        <label for="email" class="label" >Last Name</label>
+        <input type="text" name="email" v-model="formData.email" />
       </div>
-      <div class="input-group">
+      <!-- <div class="input-group">
         <label for="number" class="label" >Phone Number</label>
         <input type="text" name="Phone Number" v-model="formData.phone" />
       </div>
       <div class="input-group">
         <label for="email">Eamil</label>
         <input type="email" name="Email" v-model="formData.email" />
-      </div>
+      </div> -->
     <button type="submit" class="form-btn">Submit form</button>
   </form>
 </template>
