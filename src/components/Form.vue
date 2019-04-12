@@ -15,8 +15,8 @@
   </p>
   <div class="sender-info">
     <div>
-      <label for="name" class="label" >Your name</label>
-      <input type="text" name="name" v-model="formData.name" />
+      <label for="business_name" class="label" >Your name</label>
+      <input type="text" name="business_name" v-model="formData.business_name" />
     </div>
     <div>
       <label for="first_name" class="label" >Your name</label>
@@ -35,12 +35,6 @@
       <input type="text" name="phone" v-model="formData.phone" />
     </div>
   </div>
-
-  <div class="message-wrapper">
-    <label for="message">Message</label>
-    <textarea name="message" v-model="formData.message"></textarea>
-  </div>
-
   <button type="submit">Submit form</button>
 </form>
 </template>
@@ -69,7 +63,7 @@ export default {
         ...this.formData,
       }),
     })
-    .then(() => this.$router.push('/success'))
+    .then(() => this.$router.push('/'))
     .catch(error => alert(error))
   }
 }
