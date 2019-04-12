@@ -61,7 +61,15 @@ export default {
             ...this.formData,
           }),
         })
-        .then(() => this.$router.push('/'))
+        .then(() => {
+          this.formData.business_name = ''
+          this.formData.first_name = ''
+          this.formData.last_name = ''
+          this.formData.email = ''
+          this.formData.phone = ''
+          this.$router.push('/')
+        }
+        )
         .catch(error => alert(error))
       }
     }
