@@ -68,8 +68,8 @@ export default {
           this.formData.email = ''
           this.formData.phone = ''
           this.$router.push('/')
-        }
-        )
+          alert('Form Submitted!')
+        })
         .catch(error => alert(error))
       }
     }
