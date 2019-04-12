@@ -34,7 +34,7 @@
           </div>
         </div>
       </div>
-      <g-link to="/service/free-network-assessment" class="service-link">Learn More>></g-link>
+      <g-link to="/service/free-network-assessment" class="service-link">View More>></g-link>
     </section>
   </Layout>
 </template>
@@ -44,7 +44,7 @@ import Form from '@/components/Form.vue'
 import Icon from '@/components/Icon.vue'
 export default {
   metaInfo: {
-    title: 'Home'
+    title: 'Home',
   },
   components: {
     Form,

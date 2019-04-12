@@ -3,20 +3,26 @@
     <h2 class="partners-header">Partnerships</h2>
     <div class="partners-background">
       <div class="partners-content">
-        <Partner :icon="'dns'" :title="'Partner Title'" />
-        <Partner :icon="'dns'" :title="'Partner Title'" />
-        <Partner :icon="'dns'" :title="'Partner Title'" />
+        <g-image src="../assets/img/cisco_logo.png" class="partner-img"></g-image>
+        <g-image src="../assets/img/vmware_logo.png" class="partner-img"></g-image>
+        <g-image src="../assets/img/microsoft_logo.png" class="partner-img"></g-image>
+        <g-image src="../assets/img/dellemc_logo.jpg" class="partner-img"></g-image>
+        <g-image src="../assets/img/aws_logo.png" class="partner-img"></g-image>
+        <g-image src="../assets/img/veeam_logo.jpg" class="partner-img"></g-image>
+        <g-image src="../assets/img/ingram_logo.png" class="watchguard-img"></g-image>
+        <g-image src="../assets/img/watchguard_logo.png" class="watchguard-img"></g-image>
+        <g-image src="../assets/img/acronis_logo.png" class="watchguard-img"></g-image>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Partner from '@/components/Partner.vue'
+
 export default {
     name: 'Partners',
     components: {
-      Partner
+      
     }
 }
 </script>
@@ -43,8 +49,34 @@ export default {
     width: 100%;
     max-width: 1120px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     padding: 50px 0;
     margin: 0 auto;
+  }
+
+  .partner-img {
+    width: 200px;
+    height: 150px;
+    margin: 20px;
+    align-self: center;
+    border-radius: 15px;
+    background-color: white;
+  }
+
+  .watchguard-img {
+    width: 400px;
+    height: 100px;
+    margin: 20px;
+    align-self: center;
+    background-color: white;
+    border-radius: 15px;
+  }
+
+  @media screen and (max-width: 550px) {
+    .watchguard-img {
+      width: 300px;
+      height: 70px;
+    }
   }
 </style>

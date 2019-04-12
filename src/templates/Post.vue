@@ -10,6 +10,7 @@
         post:  post( path: $path ) {
             title
             content
+            excerpt
         }
     }
 </page-query>
@@ -18,7 +19,10 @@
 export default {
     metaInfo() {
         return {
-            title: this.$page.post.title
+            title: this.$page.post.title,
+             meta: [
+                { key: 'description', name: this.$page.post.title , content: this.$page.post.excerpt }
+            ]
         }
     }
 }

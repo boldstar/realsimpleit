@@ -19,7 +19,7 @@
             <i class="material-icons">dns</i>
             <a class="nav__link" href="#contact">Contact</a>
             <i class="material-icons">phone_in_talk</i>
-            <a class="nav__link" href="#">Support</a>
+            <a class="nav__link" href="https://na1vsa37.kaseya.net/dl.asp?id=22191582">Support</a>
             <i class="material-icons">launch</i>
           </nav>
         </div>

@@ -1,6 +1,7 @@
 ---
 title: Markdown Example
 category: Managed
+excerpt: Markdown Example
 ---
 
 

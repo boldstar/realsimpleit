@@ -3,9 +3,8 @@
       <div class="footer-content">
         <span>Real.Simple.IT</span>
         <div class="footer-details">
-          <span>Address</span>
-          <span>Phone Number</span>
-          <span>Social Media</span>
+          <span>3411 Dovie Dr <br>Spring TX, 77380</span>
+          <span>832-879-0478</span>
         </div>
       </div>
     </footer>
@@ -38,6 +37,10 @@ export default {
   .footer-details {
     display: flex;
     flex-direction: column;
+  }
+
+  span {
+    margin-bottom: 5px;
   }
 
   @media screen and (max-width: 767px) {
