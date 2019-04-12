@@ -111,6 +111,10 @@ export default {
     margin-bottom: 10px;
   }
 
+  .input-error {
+    border: 1px solid red;
+  }
+
   @media screen and (max-width: 767px) {
     .slogan {
       font-size: 1rem;
