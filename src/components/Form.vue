@@ -17,13 +17,7 @@ export default {
   props: ['slogan'],
     data() {
     return {
-      formData: {
-        business_name: '',
-        first_name: '',
-        last_name: '',
-        email: '',
-        phone: '',
-      },
+      formData: {},
       error: false
     }
   },
@@ -43,11 +37,7 @@ export default {
         }),
       })
       .then(() => {
-        this.formData.business_name = ''
-        this.formData.first_name = ''
-        this.formData.last_name = ''
-        this.formData.email = ''
-        this.formData.phone = ''
+        this.formData = ""
         this.$router.push('/')
         alert('Form Submitted!')
       })
