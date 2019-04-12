@@ -1,2 +1,4 @@
-https://ecstatic-gates-29a7ec.netlify.com/* https://ecstatic-gates-29a7ec.netlify.com/:splat 301!
+/service/* /service/:splat !301
+/about /about 301
+/ /home 301
 /*  /index.html  200
