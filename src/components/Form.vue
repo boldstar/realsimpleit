@@ -1,19 +1,70 @@
 <template>
-    <form action="/" name="Free Assessment Form" data-netlify="true" method="post">
+    <form @submit.prevent="handleSubmit" action="/" name="Free Assessment Form" method="post">
       <span class="slogan">{{ slogan }}</span>
-      <input type="text" name="Business Name" placeholder="Business Name">
-      <input type="text" name="First Name" placeholder="First Name">
-      <input type="text" name="Last Name" placeholder="Last Name">
-      <input type="email" name="Email" placeholder="Email">
-      <input type="text" name="Phone Number" placeholder="Phone Number">
-      <button type="button" class="form-btn">Submit</button>
+      <input v-model="formData.business_name" type="text" name="Business Name" placeholder="Business Name" :class="{'input-error': error}" @change="error = false">
+      <input v-model="formData.first_name" type="text" name="First Name" placeholder="First Name" :class="{'input-error': error}" @change="error = false">
+      <input v-model="formData.last_name" type="text" name="Last Name" placeholder="Last Name" :class="{'input-error': error}" @change="error = false">
+      <input v-model="formData.email" type="email" name="Email" placeholder="Email" :class="{'input-error': error}" @change="error = false">
+      <input v-model="formData.phone" type="text" name="Phone Number" placeholder="Phone Number" :class="{'input-error': error}" @change="error = false">
+      <button type="submit" class="form-btn">Submit</button>
     </form>
 </template>
 
 <script>
 export default {
     name: 'Form',
-    props: ['slogan']
+    props: ['slogan'],
+     data() {
+      return {
+        formData: {
+          business_name: '',
+          first_name: '',
+          last_name: '',
+          email: '',
+          phone: '',
+        },
+        error: false
+      }
+    },
+    methods: {
+      encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+        },
+      handleSubmit(e) {
+        if(this.business_name == '' || this.business_name == null) {
+          this.error = true 
+          return;
+        }
+        if(this.first_name == '' || this.first_name == null) {
+          this.error = true
+          return;
+          }
+        if(this.last_name == '' || this.last_name == null) {
+          this.error = true
+          return;
+          }
+        if(this.email == '' || this.email == null) {
+          this.error = true
+          return;
+          }
+        if(this.phone == '' || this.phone == null) {
+          this.error = true
+          return;
+          }
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: this.encode({
+            'form-name': e.target.getAttribute('name'),
+            ...this.formData,
+          }),
+        })
+        .then(() => this.$router.push('/'))
+        .catch(error => alert(error))
+      }
+    }
 }
 </script>
 
