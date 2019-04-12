@@ -1,11 +1,11 @@
 <template>
     <form @submit.prevent="handleSubmit" action="/" name="Free Assessment Form" method="post">
       <span class="slogan">{{ slogan }}</span>
-      <input v-model="formData.business_name" type="text" name="Business Name" placeholder="Business Name" :class="{'input-error': error}" @change="error = false">
-      <input v-model="formData.first_name" type="text" name="First Name" placeholder="First Name" :class="{'input-error': error}" @change="error = false">
-      <input v-model="formData.last_name" type="text" name="Last Name" placeholder="Last Name" :class="{'input-error': error}" @change="error = false">
-      <input v-model="formData.email" type="email" name="Email" placeholder="Email" :class="{'input-error': error}" @change="error = false">
-      <input v-model="formData.phone" type="text" name="Phone Number" placeholder="Phone Number" :class="{'input-error': error}" @change="error = false">
+      <input @input="ev => formData.business_name = ev.targe.value" type="text" name="Business Name" placeholder="Business Name" :class="{'input-error': error}" @change="error = false">
+      <input @input="ev => formData.business_name = ev.targe.value" type="text" name="First Name" placeholder="First Name" :class="{'input-error': error}" @change="error = false">
+      <input @input="ev => formData.business_name = ev.targe.value" type="text" name="Last Name" placeholder="Last Name" :class="{'input-error': error}" @change="error = false">
+      <input @input="ev => formData.business_name = ev.targe.value" type="email" name="Email" placeholder="Email" :class="{'input-error': error}" @change="error = false">
+      <input @input="ev => formData.business_name = ev.targe.value" type="text" name="Phone Number" placeholder="Phone Number" :class="{'input-error': error}" @change="error = false">
       <button type="submit" class="form-btn">Submit</button>
     </form>
 </template>
@@ -16,7 +16,13 @@ export default {
     props: ['slogan'],
      data() {
       return {
-        formData: {},
+        formData: {
+          business_name = '',
+          first_name = '',
+          last_name = '',
+          email = '',
+          phone = '',
+        },
         error: false
       }
     },
@@ -25,7 +31,7 @@ export default {
       return Object.keys(data)
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&')
-        },
+      },
       handleSubmit(e) {
         if(this.formData.business_name == '' || this.formData.business_name == null) {
           this.error = true 
