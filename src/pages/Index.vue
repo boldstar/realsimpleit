@@ -1,12 +1,12 @@
 <template>
   <Layout>
     <section class="hero">
-      <img src="../assets/img/HeroBackground.png" class="hero-background">
+      <img src="../../static/assets/img/HeroBackground.png" class="hero-background">
       <div class="hero-details">
         <h1 class="hero-header">Real.Simple.IT</h1>
         <p class="hero-info">At Real.Simple.IT, our goal is to bring high quality managed services to you and your business. We understand the importance of security and performance of your technology infrastructure. </p>
         <p class="hero-call-to-action">Apply for a free assessment today to learn more about what we have to offer!</p>
-        <g-image src="../assets/img/Arrow.png" width="250" class="arrow"></g-image>
+        <img src="../../static/assets/img/Arrow.png" width="250" class="arrow">
         <div class="btn-group">
           <g-link class="services-btn" to="/service/free-network-assessment">Services</g-link>
           <a class="contact-btn" href="#contact">Free Assesment</a>

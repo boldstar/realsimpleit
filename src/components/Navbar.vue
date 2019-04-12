@@ -2,7 +2,7 @@
     <header class="header" id="navbar">
       <div class="navbar">
         <strong>
-          <g-link to="/"><g-image src="../assets/img/Logo.png" width="70" class="logo"></g-image></g-link>
+          <g-link to="/"><img src="../../static/assets/img/Logo.png" width="70" class="logo"></g-link>
         </strong>
         <div class="navbar-links">
           <div class="div-btn"> 
