@@ -30,7 +30,13 @@ export default {
       }
     },
     methods: {
-      validateSubmit() {
+      encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+        },
+      handleSubmit(e) {
+
         if(this.business_name == '' || this.business_name == null) {
           this.error = true 
           return;
@@ -51,13 +57,7 @@ export default {
           this.error = true
           return;
           }
-      },
-      encode(data) {
-      return Object.keys(data)
-        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&')
-        },
-      handleSubmit(e) {
+
         fetch('/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
