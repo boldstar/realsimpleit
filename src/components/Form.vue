@@ -20,11 +20,11 @@
     </div>
     <div>
       <label for="first_name" class="label" >Your name</label>
-      <input type="text" name="first_name" v-model="formData.name" />
+      <input type="text" name="first_name" v-model="formData.first_name" />
     </div>
     <div>
       <label for="last_name" class="label" >Your name</label>
-      <input type="text" name="last_name" v-model="formData.name" />
+      <input type="text" name="last_name" v-model="formData.last_name" />
     </div>
     <div>
       <label for="email">Your email</label>
