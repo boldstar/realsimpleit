@@ -17,11 +17,11 @@ export default {
      data() {
       return {
         formData: {
-          business_name = '',
-          first_name = '',
-          last_name = '',
-          email = '',
-          phone = '',
+          business_name: '',
+          first_name: '',
+          last_name: '',
+          email: '',
+          phone: '',
         },
         error: false
       }
