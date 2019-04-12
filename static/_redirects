@@ -1,4 +1,0 @@
-/service/* /service/:splat !301
-/about /about 301
-/ /home 301
-/*  /index.html  200
