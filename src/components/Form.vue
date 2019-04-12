@@ -29,6 +29,7 @@ export default {
     methods: {
       encode(data) {
       return Object.keys(data)
+        console.log(data)
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&')
         },
