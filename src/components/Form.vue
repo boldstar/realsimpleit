@@ -32,7 +32,7 @@ export default {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: this.encode({
-          'form-name': e.target.getAttribute('name'),
+          'form-name': "Free Assessment Form",
               ...this.formData
         }),
       })
