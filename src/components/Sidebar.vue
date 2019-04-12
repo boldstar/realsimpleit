@@ -23,7 +23,7 @@
           </li>
         </ul>
       </div>
-      <g-image src="../../static/assets/img/microchip.png" class="microchip"></g-image>
+      <img src="../../static/assets/img/microchip.png" class="microchip">
     </div>
 </template>
 
