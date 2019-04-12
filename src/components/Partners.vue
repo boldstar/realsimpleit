@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import Partner from '@/components/Partner.vue'
+
 export default {
     name: 'Partners',
 }
