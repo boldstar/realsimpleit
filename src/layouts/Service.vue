@@ -18,14 +18,6 @@
   </div>
 </template>
 
-<static-query>
-query {
-  metaData {
-    siteName
-  }
-}
-</static-query>
-
 <script>
 import Navbar from '@/components/Navbar.vue'
 import Contact from '@/components/Contact.vue'
