@@ -12,67 +12,47 @@
 
 <script>
 export default {
-    name: 'Form',
-    props: ['slogan'],
-     data() {
-      return {
-        formData: {
-          business_name: '',
-          first_name: '',
-          last_name: '',
-          email: '',
-          phone: '',
-        },
-        error: false
-      }
-    },
-    methods: {
-      encode(data) {
-      return Object.keys(data)
-        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&')
+  name: 'Form',
+  props: ['slogan'],
+    data() {
+    return {
+      formData: {
+        business_name: '',
+        first_name: '',
+        last_name: '',
+        email: '',
+        phone: '',
       },
-      handleSubmit(e) {
-        if(this.formData.business_name == '' || this.formData.business_name == null) {
-          this.error = true 
-          return;
-        }
-        if(this.formData.first_name == '' || this.formData.first_name == null) {
-          this.error = true
-          return;
-          }
-        if(this.formData.last_name == '' || this.formData.last_name == null) {
-          this.error = true
-          return;
-          }
-        if(this.formData.email == '' || this.formData.email == null) {
-          this.error = true
-          return;
-          }
-        if(this.formData.phone == '' || this.formData.phone == null) {
-          this.error = true
-          return;
-          }
-        fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: this.encode({
-            'form-name': e.target.getAttribute('name'),
-                ...this.formData
-          }),
-        })
-        .then(() => {
-          this.formData.business_name = ''
-          this.formData.first_name = ''
-          this.formData.last_name = ''
-          this.formData.email = ''
-          this.formData.phone = ''
-          this.$router.push('/')
-          alert('Form Submitted!')
-        })
-        .catch(error => alert(error))
-      }
+      error: false
     }
+  },
+  methods: {
+    encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+              ...this.formData
+        }),
+      })
+      .then(() => {
+        this.formData.business_name = ''
+        this.formData.first_name = ''
+        this.formData.last_name = ''
+        this.formData.email = ''
+        this.formData.phone = ''
+        this.$router.push('/')
+        alert('Form Submitted!')
+      })
+      .catch(error => alert(error))
+    }
+  }
 }
 </script>
 
