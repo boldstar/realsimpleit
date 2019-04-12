@@ -2,10 +2,10 @@
     <form @submit.prevent="handleSubmit" action="/" name="Free Assessment Form" method="post">
       <span class="slogan">{{ slogan }}</span>
       <input @input="ev => formData.business_name = ev.targe.value" type="text" name="Business Name" placeholder="Business Name" :class="{'input-error': error}" @change="error = false">
-      <input @input="ev => formData.business_name = ev.targe.value" type="text" name="First Name" placeholder="First Name" :class="{'input-error': error}" @change="error = false">
-      <input @input="ev => formData.business_name = ev.targe.value" type="text" name="Last Name" placeholder="Last Name" :class="{'input-error': error}" @change="error = false">
-      <input @input="ev => formData.business_name = ev.targe.value" type="email" name="Email" placeholder="Email" :class="{'input-error': error}" @change="error = false">
-      <input @input="ev => formData.business_name = ev.targe.value" type="text" name="Phone Number" placeholder="Phone Number" :class="{'input-error': error}" @change="error = false">
+      <input @input="ev => formData.first_name = ev.targe.value" type="text" name="First Name" placeholder="First Name" :class="{'input-error': error}" @change="error = false">
+      <input @input="ev => formData.last_name = ev.targe.value" type="text" name="Last Name" placeholder="Last Name" :class="{'input-error': error}" @change="error = false">
+      <input @input="ev => formData.email = ev.targe.value" type="email" name="Email" placeholder="Email" :class="{'input-error': error}" @change="error = false">
+      <input @input="ev => formData.phone = ev.targe.value" type="text" name="Phone Number" placeholder="Phone Number" :class="{'input-error': error}" @change="error = false">
       <button type="submit" class="form-btn">Submit</button>
     </form>
 </template>
