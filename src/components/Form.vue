@@ -58,7 +58,11 @@ export default {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: this.encode({
             'form-name': e.target.getAttribute('name'),
-            ...this.formData,
+                ...this.formData.business_name,
+                ...this.formData.first_name,
+                ...this.formData.last_name,
+                ...this.formData.email,
+                ...this.formData.phone,
           }),
         })
         .then(() => {
