@@ -16,20 +16,13 @@ export default {
     props: ['slogan'],
      data() {
       return {
-        formData: {
-          business_name: '',
-          first_name: '',
-          last_name: '',
-          email: '',
-          phone: '',
-        },
+        formData: {},
         error: false
       }
     },
     methods: {
       encode(data) {
       return Object.keys(data)
-        console.log(data)
         .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
         .join('&')
         },
@@ -59,11 +52,7 @@ export default {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: this.encode({
             'form-name': e.target.getAttribute('name'),
-                ...this.formData.business_name,
-                ...this.formData.first_name,
-                ...this.formData.last_name,
-                ...this.formData.email,
-                ...this.formData.phone,
+                ...this.formData
           }),
         })
         .then(() => {
