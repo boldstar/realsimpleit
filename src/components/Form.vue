@@ -33,23 +33,23 @@ export default {
         .join('&')
         },
       handleSubmit(e) {
-        if(this.business_name == '' || this.business_name == null) {
+        if(this.formData.business_name == '' || this.formData.business_name == null) {
           this.error = true 
           return;
         }
-        if(this.first_name == '' || this.first_name == null) {
+        if(this.formData.first_name == '' || this.formData.first_name == null) {
           this.error = true
           return;
           }
-        if(this.last_name == '' || this.last_name == null) {
+        if(this.formData.last_name == '' || this.formData.last_name == null) {
           this.error = true
           return;
           }
-        if(this.email == '' || this.email == null) {
+        if(this.formData.email == '' || this.formData.email == null) {
           this.error = true
           return;
           }
-        if(this.phone == '' || this.phone == null) {
+        if(this.formData.phone == '' || this.formData.phone == null) {
           this.error = true
           return;
           }
