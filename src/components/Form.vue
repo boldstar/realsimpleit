@@ -62,7 +62,10 @@ export default {
         ...this.formData,
       }),
     })
-    .then(() => this.$router.push('/'))
+    .then(() => {
+      this.formData = ""
+      this.$router.push('/')
+    })
     .catch(error => alert(error))
   }
 }
