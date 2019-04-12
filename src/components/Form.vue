@@ -1,37 +1,19 @@
 <template>
-     <form action="/" name="Free Assessment Form" data-netlify="true" netlify-honeypot="bot-field" method="post">
+    <form action="">
       <span class="slogan">{{ slogan }}</span>
-      <p class="hidden-input">
-        <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-      </p>
-      <input v-model="formData.business_name" type="text" name="Business Name" placeholder="Business Name" :class="{'input-error': error}" @change="error = false">
-      <input v-model="formData.first_name" type="text" name="First Name" placeholder="First Name" :class="{'input-error': error}" @change="error = false">
-      <input v-model="formData.last_name" type="text" name="Last Name" placeholder="Last Name" :class="{'input-error': error}" @change="error = false">
-      <input v-model="formData.email" type="email" name="Email" placeholder="Email" :class="{'input-error': error}" @change="error = false">
-      <input v-model="formData.phone" type="text" name="Phone Number" placeholder="Phone Number" :class="{'input-error': error}" @change="error = false">
-      <button type="submit" class="form-btn">Submit</button>
+      <input type="text" name="Business Name" placeholder="Business Name">
+      <input type="text" name="First Name" placeholder="First Name">
+      <input type="text" name="Last Name" placeholder="Last Name">
+      <input type="email" name="Email" placeholder="Email">
+      <input type="text" name="Phone Number" placeholder="Phone Number">
+      <button type="button" class="form-btn">Submit</button>
     </form>
 </template>
 
 <script>
 export default {
     name: 'Form',
-    props: ['slogan'],
-        data() {
-      return {
-        formData: {
-          business_name: '',
-          first_name: '',
-          last_name: '',
-          email: '',
-          phone: '',
-        },
-        error: false
-      }
-    },
-    methods: {
-      
-    }
+    props: ['slogan']
 }
 </script>
 
@@ -45,10 +27,6 @@ export default {
     padding: 20px;
     border-radius: 5px;
     background: var(--white);
-  }
-
-  .hidden-input {
-    display: none;
   }
 
   input {
