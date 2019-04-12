@@ -20,14 +20,11 @@
 <script>
 
 export default {
-    name: 'Partners',
-    components: {
-      
-    }
+    name: 'Partners'
 }
 </script>
 
-<style>
+<style scoped>
   .partners {
     display: flex;
     flex-direction: column;
