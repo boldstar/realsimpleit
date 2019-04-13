@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow: 
+Sitemap: http://www.real-simple-it.com/sitemap.xml
