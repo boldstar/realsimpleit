@@ -4,10 +4,10 @@
       <div class="contact-content">
         <div class="contact-details">
           <h2>Learn More</h2>
-          <p>To learn more about our services or if you have any questions please feel free to call us at (111) 222-3333 or fill out the form on the right. Looking forward to hearing from you!</p>
+          <p>To learn more about our services or if you have any questions please feel free to call us at (832) 879-0478 or fill out the form on the right. Looking forward to hearing from you!</p>
           <g-image src="../assets/img/Arrow.png" width="250" class="arrow"></g-image>
         </div>
-        <Form :slogan="'Get your free quote today!'" id="contact" class="contact-form" />
+        <Form :slogan="'Get your free assessment today!'" id="contact" class="contact-form" />
       </div>
   </div>
 </template>
