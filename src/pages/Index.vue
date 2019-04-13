@@ -44,7 +44,10 @@ import Form from '@/components/Form.vue'
 import Icon from '@/components/Icon.vue'
 export default {
   metaInfo: {
-    title: 'Home'
+    title: 'Home',
+    meta: [
+      {key: 'description', title: 'IT Network Solutions', content: 'Real simple network IT solutions'}
+    ]
   },
   components: {
     Form,
