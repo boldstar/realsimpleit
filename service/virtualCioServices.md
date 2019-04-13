@@ -1,5 +1,5 @@
 ---
-title: Virtual ICO Services
+title: Virtual CIO Services
 category: Managed
 excerpt: Analyze the IT environment to identify opportunities for improvement
 ---
