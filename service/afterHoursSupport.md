@@ -1,8 +1,8 @@
 ---
 title: After Hours Support
 category: Managed
-excerpt: We can simplify and centralize the deployment of anti-virus software to all systems.
+excerpt: Your MSP should be monitoring your systems at all times and if required should be available to you out of office hours
 ---
 
-We can simplify and centralize the deployment of anti-virus software to all systems. This will keep your system current with all the latest software to fight the ever evolving attacks to your network.
+Your MSP should be monitoring your systems at all times and if required should be available to you out of office hours. If you need something, they should be on-call for you and available for questions, concerns, or feedback.
  
