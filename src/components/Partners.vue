@@ -8,7 +8,7 @@
         <img src="../../static/assets/microsoft_logo.png" alt="microsoft" class="partner-img">
         <img src="../../static/assets/dellemc_logo.jpg" alt="dellemc" class="partner-img">
         <img src="../../static/assets/aws_logo.png" alt="aws" class="partner-img">
-        <img src="../../static/assets/veeam_logo.jpg" alt="veeam" class="partner-img">
+        <img src="../../static/assets/veeam_logo.png" alt="veeam" class="partner-veeam-wide-img">
         <img src="../../static/assets/acronis_logo.png" alt="acronis" class="partner-wide-img">
         <img src="../../static/assets/ingram_logo.png" alt="ingram" class="partner-wide-img">
         <img src="../../static/assets/watchguard_logo.png" alt="watchguard" class="partner-wide-img">
@@ -67,10 +67,27 @@ export default {
     background-color: white;
     border-radius: 15px;
   }
+  .partner-veeam-wide-img {
+    width: 400px;
+    height: 70px;
+    margin: 20px;
+    align-self: center;
+    background-color: white;
+    border-radius: 5px;
+  }
   @media screen and (max-width: 550px) {
     .partner-wide-img {
       width: 300px;
       height: 70px;
+    }
+
+    .partner-veeam-wide-img {
+      width: 300px;
+      height: 50px;
+      margin: 20px;
+      align-self: center;
+      background-color: white;
+      border-radius: 5px;
     }
   }
 </style>
