@@ -18,7 +18,7 @@
         <span class="service-category">Managed</span>
         <hr>
         <ul>
-          <li v-for="service in $static.services.edges" :key="service.id" @click="toggle = false">
+          <li v-for="service in $static.services.edges" :key="service.id" @click="toggle = false" v-if="service.node.title != 'Markdown Example'">
             <g-link v-if="service.node.category == 'Managed'" class="services-link" :to="service.node.path" :class="{'active-link' : service.node.path == $route.path}">{{ service.node.title }}</g-link>
           </li>
         </ul>
