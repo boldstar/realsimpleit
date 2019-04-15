@@ -4,7 +4,7 @@
       <g-image src="../assets/img/HeroBackground.png" class="hero-background"></g-image>
       <div class="hero-details">
         <h1 class="hero-header">Real.Simple.IT</h1>
-        <p class="hero-info">At Real.Simple.IT, our goal is to bring high quality managed services to you and your business. We understand the importance of security and performance of your technology infrastructure. </p>
+        <p class="hero-info">At Real.Simple.IT, our goal is to bring high quality managed services to you and your business. We understand the importance of security and performance of your infrastructure. </p>
         <p class="hero-call-to-action">Apply for a free assessment today to learn more about what we have to offer!</p>
         <g-image src="../assets/img/Arrow.png" width="250" class="arrow"></g-image>
         <div class="btn-group">
